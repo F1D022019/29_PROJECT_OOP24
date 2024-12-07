@@ -7,16 +7,25 @@ public class LoginPage extends JFrame implements Navigable {
         setTitle("Login - SaSaMbo");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        setSize(800, 600);
+        setSize(1024, 600);
 
         // Left Panel (Illustration)
         JPanel leftPanel = new JPanel();
-        leftPanel.setBackground(new Color(51, 102, 0));
+        leftPanel.setBackground(new Color(46, 77, 46)); // Samakan dengan warna di gambar
         leftPanel.setLayout(new BorderLayout());
-        JLabel illustration = new JLabel(new ImageIcon("C:\\Users\\ADIT\\OneDrive\\Documents\\SEMESTER 5\\PBO\\coba\\ppp\\asset\\foto animasi sasambo.png")); // Add illustration image
+
+        // Gambar ilustrasi dan teks
+        JLabel illustration = new JLabel(new ImageIcon("C:\\Users\\ADIT\\OneDrive\\Documents\\SEMESTER 5\\PBO\\coba\\ppp\\asset\\foto animasi sasambo.png"));
+        illustration.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel leftText = new JLabel("<html><div style='text-align: center; color: white; font-size: 18px;'>Jelajahi warisan, temukan sejarah<br>dan hayati budaya!</div></html>");
+        leftText.setHorizontalAlignment(SwingConstants.CENTER);
+        leftText.setVerticalAlignment(SwingConstants.BOTTOM);
+        leftText.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
         leftPanel.add(illustration, BorderLayout.CENTER);
-        leftPanel.add(new JLabel("Jelajahi warisan, temukan sejarah dan hayati budaya!"), BorderLayout.SOUTH);
+        leftPanel.add(leftText, BorderLayout.SOUTH);
         add(leftPanel, BorderLayout.WEST);
+
 
         // Right Panel (Login Form)
         JPanel rightPanel = new JPanel();
